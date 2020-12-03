@@ -65,11 +65,11 @@ steps:
   displayName: 'Archive $(Build.BinariesDirectory)'
 
 - task: AzureRmWebAppDeployment@4
-  displayName: 'Azure App Service Deploy: netapps'
+  displayName: 'Azure App Service Deploy: MusicsiteApp'
   inputs:
     azureSubscription: 'Free Trial (de41a4b5-07b4-4eff-ba63-33c5643b5f9a)'
-    WebAppName: netapps
+    WebAppName: MusicsiteApp
     deployToSlotOrASE: true
-    ResourceGroupName: APP
+    ResourceGroupName: Musicsite
     packageForLinux: '$(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip'
 
