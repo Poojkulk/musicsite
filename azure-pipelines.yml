@@ -38,9 +38,6 @@ steps:
   inputs:
     restoreSolution: '$(Parameters.solution)'
 
-- task: DotNetCoreCLI@2
-  displayName: 'dotnet build'
-
 - task: VSTest@2
   displayName: 'Test Assemblies'
   inputs:
